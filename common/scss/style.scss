@@ -1,0 +1,763 @@
+@import "color-template";
+
+.header-logo__heading_main {
+  color: $beige;
+}
+
+.header-logo__description_main {
+  color: $white;
+}
+
+.list_link {
+  .link {
+    color: $white-gray;
+  }
+}
+
+.list_link-active {
+  a {
+    color: $light-l;
+  }
+}
+
+.list_link-interactive {
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: scale(120%);
+    .link_interactive {
+      transform: scale(120%);
+      color: $light-l;
+    }
+  }
+}
+
+// ! burger menu color
+.nav-menu_line {
+  border-color: $beige;
+}
+
+.background-header,
+.not-only {
+  @extend %gradient-background;
+}
+
+.not-only {
+  padding-top: 90px;
+
+  @media (max-width: $width-medium) {
+    padding-top: 60px;
+  }
+}
+
+.start-screen {
+  @extend %screen-setting;
+
+  @media (max-width: $width-medium) {
+    flex-direction: column;
+  }
+
+  .start-screen__content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-top: 162px;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @media (max-width: $width-medium) {
+      margin: 0;
+      align-items: center;
+
+      .content {
+        margin-left: 0;
+      }
+
+      form {
+        align-self: center;
+      }
+    }
+
+    @media (max-width: $width-small) {
+      .content {
+        margin: 0 10px;
+      }
+      .content__description {
+        text-align: center;
+      }
+    }
+
+    .content__heading {
+      max-width: 310px;
+      width: 100%;
+      // Font style content title
+      font-family: Georgia, sans-serif;
+      font-weight: 400;
+      font-size: 44px;
+      line-height: 130%;
+      color: $white;
+
+      @media (max-width: $width-small) {
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 0.06em;
+      }
+    }
+
+    .content__description {
+      max-width: 460px;
+      width: 100%;
+      margin-top: 42px;
+      // Font style content description
+      font-family: Arial, sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 160%;
+      color: $white-gray;
+    }
+
+    .content_button {
+      width: 207px;
+      height: 52px;
+      margin-top: 42px;
+      margin-bottom: 40px;
+
+      // color layout
+      background: $beige;
+      border: none;
+      border-radius: 100px;
+
+      // Font style button content
+      color: $gray-black;
+      transition: 0.3s ease-in;
+
+      @media (max-width: $width-medium) {
+        margin-top: 40px;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background: $primary-light;
+      }
+    }
+  }
+
+  .start-screen__image {
+    display: flex;
+    align-items: flex-end;
+
+    margin-right: 40px;
+    margin-left: auto;
+
+    img {
+      max-width: 698px;
+      width: 100%;
+    }
+
+    @media (max-width: $width-without-scroll) {
+      margin-right: 40px - $scroll-width;
+    }
+
+    @media (max-width: $width-medium) {
+      margin-right: 30px;
+      margin-top: 60px;
+      img {
+        max-width: 569px;
+      }
+
+      @media (max-width: $width-small) {
+        margin-right: 0;
+        margin-top: 66px;
+        img {
+          max-width: 260px;
+        }
+      }
+    }
+  }
+}
+
+.about {
+  @extend %screen-setting;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  justify-content: center;
+
+  @media (max-width: $width-large) {
+    padding-left: $scroll-width;
+  }
+
+  @media (max-width: $width-medium) {
+    flex-direction: column;
+  }
+
+  @media (max-width: $width-mobile) {
+    padding-top: 42px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 37px;
+  }
+
+  .about__image {
+    max-width: 300px;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: $width-medium) {
+      order: 1;
+      margin-top: 76px;
+      margin-left: 0;
+      margin-right: 17px;
+    }
+
+    @media (max-width: $width-mobile) {
+      max-width: 260px;
+      margin-top: 37px;
+      margin-right: 0;
+    }
+  }
+
+  .about__content {
+    margin-left: 120px;
+
+    @media (max-width: $width-medium) {
+      order: 0;
+      margin-left: 0;
+      margin-right: 17px;
+    }
+
+    @media (max-width: $width-small) {
+      margin-right: 0;
+    }
+
+    .content__heading {
+      max-width: 370px;
+      width: 100%;
+      // Font setting
+      color: $dark-l;
+
+      @media (max-width: $width-mobile) {
+        text-align: center;
+      }
+    }
+
+    .content__description {
+      max-width: 430px;
+      width: 100%;
+      padding-bottom: 5px;
+      @media (max-width: $width-mobile) {
+        padding-top: 2px;
+      }
+      .description-item {
+        margin-top: 25px;
+        // Font setting
+        font-family: "Arial";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 160%;
+        color: $dark-xl;
+
+        @media (max-width: $width-medium) {
+          margin-top: 25px;
+        }
+
+        @media (max-width: $width-mobile) {
+          padding-left: 15px;
+          padding-right: 15px;
+          margin-top: 22px;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
+
+.our-friends {
+  background: $light-l;
+  padding-top: 76px;
+
+  @media (max-width: $width-mobile) {
+    padding-top: 42px;
+  }
+
+  .our-friends_content {
+    @extend %screen-setting;
+    flex-direction: column;
+    width: 100%;
+
+    @media (max-width: $width-mobile) {
+      padding: 0 10px;
+    }
+
+    .our-friends__heading {
+      margin: 0 auto;
+      color: $gray-black;
+
+      @media (max-width: $width-without-scroll) {
+        padding-left: $scroll-width;
+      }
+
+      @media (max-width: $width-medium) {
+        padding-left: 0;
+      }
+
+      max-width: 400px;
+      width: 100%;
+
+      .heading__text {
+        text-align: center;
+      }
+    }
+
+    .our-friends__slider {
+      display: flex;
+      box-sizing: border-box;
+      margin-top: 20px;
+      justify-content: space-between;
+      padding-left: 40px;
+      padding-right: 40px;
+
+      @media (max-width: $width-large) {
+        padding-right: 40px - $scroll-width;
+      }
+
+      @media (max-width: $width-medium) {
+        padding-right: 30px - $scroll-width;
+        padding-left: 30px;
+        margin-top: 17px;
+      }
+
+      @media (max-width: $width-small) {
+        margin-top: 23px;
+      }
+
+      @media (max-width: $width-mobile-medium) {
+        padding: 0;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+
+      .slider_section {
+        display: flex;
+        justify-content: space-between;
+        max-width: 990px;
+        min-width: 270px;
+        width: 100%;
+        height: 435px;
+        margin-top: 20px;
+        padding: 20px;
+        flex-wrap: wrap;
+        overflow: hidden;
+
+        @media (max-width: $width-medium) {
+          padding: 20px 12px;
+        }
+
+        @media (max-width: $width-mobile) {
+          order: 0;
+          margin-top: 1px;
+          padding: 20px 15px 0px 15px;
+        }
+
+        .slider {
+          display: flex;
+          column-gap: 90px;
+        }
+
+        .slider__animal-item {
+          max-width: 270px;
+          width: 100%;
+          height: 435px;
+          border-radius: 9px 9px 0 0;
+
+          background: $light-s;
+
+          .animal-item__image {
+            width: 100%;
+            height: 270px;
+          }
+
+          .animal-item__name {
+            // Font
+            line-height: 23px;
+            color: $dark-l;
+
+            // position
+            text-align: center;
+            margin: 30px 0;
+          }
+
+          .animal-item__button {
+            display: block;
+            box-sizing: border-box;
+            margin: 0 auto;
+
+            width: 187px;
+            height: 52px;
+
+            border: 2px solid $beige;
+            border-radius: 100px;
+            transition: 0.3s ease-in;
+          }
+        }
+      }
+
+      // slider buttons
+      .slider_btn {
+        flex-shrink: 0;
+        align-self: center;
+        margin-top: 20px;
+        width: 52px;
+        height: 52px;
+        background-image: url("../../assets/icons/button_arrow.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 2px solid $beige;
+        border-radius: 100px;
+
+        @media (max-width: $width-mobile-medium) {
+          order: 1;
+          margin-top: 21px;
+        }
+      }
+
+      .slider_right-btn {
+        transform: rotate(180deg);
+
+        @media (max-width: $width-medium) {
+          margin-right: 17px;
+        }
+
+        @media (max-width: $width-mobile-medium) {
+          margin-right: 0;
+          margin-left: 21px;
+        }
+      }
+    }
+
+    .our-friends_btn {
+      display: flex;
+      margin-top: 40px;
+      margin-bottom: 100px;
+      justify-content: center;
+
+      @media (max-width: $width-without-scroll) {
+        padding-left: $scroll-width;
+      }
+      @media (max-width: $width-mobile-medium) {
+        padding-left: 0;
+        margin-bottom: 42px;
+      }
+
+      .btn-info {
+        width: 261px;
+        height: 52px;
+        background: $beige;
+        color: $gray-black;
+        border-radius: 100px;
+        border: none;
+
+        transition: 0.3s ease-in;
+
+        &:hover {
+          cursor: pointer;
+          background: $primary-light;
+        }
+
+        @media (max-width: $width-medium) {
+          margin-right: 17px;
+        }
+
+        @media (max-width: $width-small) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.help {
+  @extend %screen-setting;
+  flex-direction: column;
+  padding-top: 80px;
+
+  @media (max-width: $width-small) {
+    padding-top: 42px;
+  }
+
+  .help__heading {
+    margin: 0 auto;
+
+    @media (max-width: $width-without-scroll) {
+      padding-left: $scroll-width;
+    }
+
+    @media (max-width: $width-medium) {
+      padding-left: 0;
+    }
+
+    .content__heading {
+      max-width: 360px;
+      width: 100%;
+      color: $dark-l;
+      text-align: center;
+    }
+  }
+
+  .help__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: 5px;
+    margin-right: 60px;
+    margin-bottom: 100px;
+    margin-left: 60px;
+
+    @media (max-width: 1297px) {
+      margin-right: 60px - $scroll-width;
+    }
+
+    @media (max-width: $width-medium) {
+      margin-right: 35px;
+      margin-left: 36px;
+    }
+
+    @media (max-width: $width-small) {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 0 10px 0 5px;
+      margin-top: 7px;
+      margin-bottom: 44px;
+      justify-content: flex-start;
+      column-gap: 30px;
+    }
+
+    @media (max-width: $width-small) {
+      padding: 0 15px;
+    }
+
+    .list-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 60px;
+
+      height: 113px;
+      margin-top: 55px;
+
+      @media (max-width: 1269px) {
+        padding: 0;
+        width: 33%;
+      }
+
+      @media (max-width: $width-small) {
+        width: 130px;
+        height: 87px;
+        margin-top: 30px;
+      }
+
+      // @media (max-width: $width-mobile-medium) {
+      //   width: 130px;
+      // }
+
+      .list-item__icon {
+        display: flex;
+
+        img {
+          height: 60px;
+          width: 60px;
+          @media (max-width: $width-small) {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+
+      .list-item__heading {
+        margin-top: 28px;
+
+        color: $dark-l;
+        line-height: 23px;
+
+        @media (max-width: $width-small) {
+          margin-top: 20px;
+        }
+
+        @media (max-width: $width-small) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+.in-addition {
+  padding-top: 77px;
+  padding-bottom: 100px;
+  background: $light-l;
+
+  @media (max-width: $width-medium) {
+    padding-bottom: 96px;
+  }
+
+  @media (max-width: $width-small) {
+    padding-top: 40px;
+    padding-bottom: 38px;
+  }
+
+  .in-addition__block {
+    @extend %screen-setting;
+
+    @media (max-width: $width-medium) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .in-addition__image {
+      width: auto;
+      height: 261px;
+      margin-top: 11px;
+      margin-left: auto;
+
+      @media (max-width: $width-without-scroll) {
+        padding-left: $scroll-width;
+      }
+
+      @media (max-width: $width-medium) {
+        order: 1;
+        margin-left: 0;
+        margin-top: 60px;
+        height: auto;
+        padding-left: 0;
+      }
+
+      @media (max-width: $width-small) {
+        margin-top: 42px;
+      }
+
+      img {
+        max-width: 505px;
+        width: 100%;
+
+        @media (max-width: $width-small) {
+          max-width: 260px;
+        }
+      }
+    }
+
+    .in-addition__content {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      margin-right: auto;
+      padding-left: 15px + $scroll-width;
+      min-width: 300px;
+
+      @media (max-width: $width-medium) {
+        padding-left: 0;
+        margin-right: 0;
+        margin-top: 2px;
+      }
+
+      @media (max-width: $width-small) {
+        padding-top: 0;
+      }
+
+      .content__heading {
+        max-width: 300px;
+        width: 100%;
+        color: $dark-l;
+
+        @media (max-width: $width-small) {
+          max-width: $width-small;
+          text-align: center;
+        }
+      }
+
+      .content__bank-heading {
+        max-width: 310px;
+        width: 100%;
+        margin-top: 20px;
+
+        // Font h5 setting
+        font-family: "Georgia";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 110%;
+        letter-spacing: 0.06em;
+        color: $dark-l;
+
+        @media (max-width: $width-small) {
+          max-width: $width-small;
+          line-height: 160%;
+          letter-spacing: normal;
+          text-align: center;
+        }
+      }
+
+      .content__credit-card {
+        display: flex;
+        max-width: 350px;
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px 0;
+
+        background: $beige;
+        border-radius: 9px;
+
+        cursor: pointer;
+
+        @media (max-width: $width-small) {
+          max-width: 281px;
+          margin: 20px auto;
+        }
+
+        .credit-card__icon {
+          width: 30px;
+          height: 23px;
+          margin-left: 15px;
+        }
+
+        .credit-card__bank-account {
+          margin-left: 15px;
+          margin-right: 15px;
+          color: $dark-l;
+
+          @media (max-width: $width-small) {
+            padding-top: 3px;
+            font-size: 15px;
+          }
+        }
+      }
+
+      .content__donation-description {
+        max-width: 380px;
+        width: 100%;
+        margin-top: 20px;
+        // Font contact description setting
+        font-family: "Arial";
+        font-style: italic;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: $dark-m;
+
+        @media (max-width: $width-small) {
+          max-width: 280px;
+          padding: 0 20px;
+          margin-top: 0;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

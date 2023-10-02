@@ -1,0 +1,334 @@
+.our-friends .pets-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header-pets {
+  padding-bottom: 30px;
+}
+
+.header-logo__heading_pets {
+  color: #545454;
+}
+
+.header-logo__description_pets {
+  color: #292929;
+}
+
+.list_link .link {
+  color: #545454;
+}
+
+.list_link-active a {
+  color: #292929;
+}
+
+.list_link-interactive {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.list_link-interactive:hover {
+  -webkit-transform: scale(120%);
+          transform: scale(120%);
+}
+.list_link-interactive:hover .link_interactive {
+  color: #292929;
+}
+
+.nav-menu_line {
+  border-color: black;
+}
+
+.our-friends {
+  background: #F6F6F6;
+  padding-top: 79px;
+  padding-bottom: 100px;
+}
+@media (max-width: 768px) {
+  .our-friends {
+    padding-bottom: 74px;
+  }
+}
+@media (max-width: 454px) {
+  .our-friends {
+    padding-top: 42px;
+    padding-bottom: 43px;
+  }
+}
+.our-friends .pets-content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.our-friends .pets-content .our-friends__heading {
+  margin: 0 auto;
+  max-width: 400px;
+  width: 100%;
+}
+@media (max-width: 1297px) {
+  .our-friends .pets-content .our-friends__heading {
+    padding-left: 17px;
+  }
+}
+@media (max-width: 768px) {
+  .our-friends .pets-content .our-friends__heading {
+    padding-left: 0;
+  }
+}
+.our-friends .pets-content .our-friends__heading .heading__text {
+  text-align: center;
+  color: #545454;
+}
+@-webkit-keyframes moveForward {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  49% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  50% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+  51% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes moveForward {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  49% {
+    -webkit-transform: translateX(-150%);
+            transform: translateX(-150%);
+  }
+  50% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+  51% {
+    -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@-webkit-keyframes moveBack {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  49% {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+  }
+  50% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+  51% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes moveBack {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  49% {
+    -webkit-transform: translateX(150%);
+            transform: translateX(150%);
+  }
+  50% {
+    -webkit-transform: translateY(150%);
+            transform: translateY(150%);
+  }
+  51% {
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+.our-friends .pets-content .slider_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  max-height: 1365px;
+  overflow: hidden;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  margin-top: 10px;
+  margin-right: 20px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+  padding: 20px;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@media (max-width: 1297px) {
+  .our-friends .pets-content .slider_section {
+    max-height: 930px;
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 35px;
+  }
+}
+@media (max-width: 962px) {
+  .our-friends .pets-content .slider_section {
+    max-height: 1365px;
+  }
+}
+@media (max-width: 768px) {
+  .our-friends .pets-content .slider_section {
+    row-gap: 30px;
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    padding-left: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 320px) {
+  .our-friends .pets-content .slider_section {
+    margin-top: 20px;
+  }
+}
+.our-friends .pets-content .slider_section .slider__animal-item {
+  width: 270px;
+  height: 435px;
+  margin-top: 30px;
+  background: #FAFAFA;
+  border-radius: 9px 9px 0 0;
+}
+@media (max-width: 768px) {
+  .our-friends .pets-content .slider_section .slider__animal-item {
+    margin-top: 0;
+  }
+}
+.our-friends .pets-content .slider_section .slider__animal-item .animal-item__image {
+  width: 100%;
+  height: 270px;
+}
+.our-friends .pets-content .slider_section .slider__animal-item .animal-item__name {
+  line-height: 23px;
+  color: #545454;
+  text-align: center;
+  margin: 30px 0;
+}
+.our-friends .pets-content .slider_section .slider__animal-item .animal-item__button {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto;
+  width: 187px;
+  height: 52px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+.our-friends .pets-content .our-friends__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 13px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 17px;
+}
+@media (max-width: 1297px) {
+  .our-friends .pets-content .our-friends__navigation {
+    padding-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .our-friends .pets-content .our-friends__navigation {
+    margin-top: 0;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 454px) {
+  .our-friends .pets-content .our-friends__navigation {
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+.our-friends .pets-content .our-friends__navigation .navigation-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+}
+@media (max-width: 454px) {
+  .our-friends .pets-content .our-friends__navigation .navigation-btn {
+    margin-left: 0;
+  }
+}
+.our-friends .pets-content .our-friends__navigation .navigation-btn-arrow_next,
+.our-friends .pets-content .our-friends__navigation .navigation-btn-arrow_last-next,
+.our-friends .pets-content .our-friends__navigation .navigation-btn-arrow_previous,
+.our-friends .pets-content .our-friends__navigation .navigation-btn-arrow_previous-start {
+  border: 2px solid #f1cdb3;
+}
+.our-friends .pets-content .our-friends__navigation .button-arrow_inactive {
+  border-color: #cdcdcd;
+  pointer-events: none;
+}
+.our-friends .pets-content .our-friends__navigation .navigation_current-page-btn {
+  background: #f1cdb3;
+  pointer-events: none;
+}

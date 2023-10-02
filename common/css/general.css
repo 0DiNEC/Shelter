@@ -1,0 +1,74 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.h3-title {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+@media (max-width: 454px) {
+  .h3-title {
+    font-size: 25px;
+  }
+}
+
+.h4-title {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-font {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.button-arrow_hover {
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  background: #FAFAFA;
+  cursor: pointer;
+}
+.button-arrow_hover:hover {
+  background: #FDDCC4;
+}
+
+.button-arrow_inactive {
+  color: #CDCDCD;
+  border: 2px solid #CDCDCD;
+}
+
+.slider__animal-item {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.slider__animal-item .animal-item__button {
+  background: #FAFAFA;
+  color: #292929;
+}
+.slider__animal-item:hover {
+  background: #ffffff;
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
+  -webkit-box-shadow: 0px 0px 10px 2px #FDDCC4;
+          box-shadow: 0px 0px 10px 2px #FDDCC4;
+  cursor: pointer;
+}
+.slider__animal-item:hover .animal-item__button {
+  cursor: pointer;
+  background: #FDDCC4;
+}

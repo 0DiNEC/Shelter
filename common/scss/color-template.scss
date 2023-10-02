@@ -1,0 +1,46 @@
+//Colors
+
+// light color
+$beige: #f1cdb3;
+$beige-hover: #fddcc4;
+$white: #ffffff;
+$white-gray: #cdcdcd;
+$light-l: #F6F6F6;
+$light-s: #FAFAFA;
+$primary-light: #FDDCC4;
+
+// dark color
+$gray-black: #292929;
+$gray-black-opacity: rgba(41,41,41,0.6);
+$dark-l: #545454;
+$dark-xl: #4c4c4c;
+$dark-m: #B2B2B2;
+$dark-s: #CDCDCD;
+
+// const modifications digit
+$scroll-width: 17px;
+$width-without-scroll: 1280px + $scroll-width;
+
+$width-large: 1280px;
+$width-medium: 768px;
+$width-medium_no-scroll: 767.90px;
+$width-small: 454px;
+$width-mobile-medium: 376px;
+$width-mobile: 320px;
+
+
+%gradient-background {
+  background: url("../../assets/images/noise_transparent@2x.png"),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+    background-attachment: fixed;
+}
+
+// main blocks setting
+%screen-setting {
+  display: flex;
+  box-sizing: border-box;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+

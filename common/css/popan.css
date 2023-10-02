@@ -1,0 +1,123 @@
+.popan-background {
+  -webkit-transition: visibility, opacity 0.3s ease;
+  transition: visibility, opacity 0.3s ease;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: rgba(41, 41, 41, 0.6);
+}
+.popan-background .popan-section {
+  position: absolute;
+  max-width: 630px;
+  min-width: 220px;
+  max-height: 400px;
+  min-height: 300px;
+  background: #FAFAFA;
+  border-radius: 9px;
+}
+@media (max-width: 500px) {
+  .popan-background .popan-section {
+    max-width: 220px;
+  }
+}
+.popan-background .popan-section .popan-close_button {
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #f1cdb3;
+  border-radius: 100px;
+  right: -42px;
+  top: -53px;
+  cursor: pointer;
+  -webkit-transition: background 0.2s ease;
+  transition: background 0.2s ease;
+}
+.popan-background .popan-section .popan-close_button:hover {
+  background: #f1cdb3;
+}
+.popan-background .popan-section .popan-close_button img {
+  position: absolute;
+  left: 38.46%;
+  right: 38.46%;
+  top: 38.46%;
+  bottom: 38.46%;
+}
+.popan-background .popan-section .popan-content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (max-width: 700px) {
+  .popan-background .popan-section .popan-content .popan-content__image {
+    display: none;
+  }
+}
+.popan-background .popan-section .popan-content .popan-content-info {
+  padding: 10px;
+}
+@media (max-width: 500px) {
+  .popan-background .popan-section .popan-content .popan-content-info .heading__text {
+    text-align: center;
+  }
+}
+.popan-background .popan-section .popan-content .popan-content-info .animal-item__name {
+  margin: 10px 0;
+}
+@media (max-width: 500px) {
+  .popan-background .popan-section .popan-content .popan-content-info .animal-item__name {
+    text-align: center;
+  }
+}
+.popan-background .popan-section .popan-content .popan-content-info .animal-description {
+  margin-top: 10px;
+  line-height: 110%;
+}
+@media (max-width: 500px) {
+  .popan-background .popan-section .popan-content .popan-content-info .animal-description {
+    text-align: justify;
+  }
+}
+.popan-background .popan-section .popan-content .popan-content-info .main-description-info {
+  margin-top: 5px;
+  margin-left: 14px;
+}
+.popan-background .popan-section .popan-content .popan-content-info .main-description-info li {
+  padding-bottom: 6px;
+}
+.popan-background .popan-section .popan-content .popan-content-info .main-description-info li::marker {
+  color: #f1cdb3;
+}
+.popan-background .popan-section .popan-content .popan-content-info .main-description-info li span {
+  font-size: 15px;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  font-family: "Georgia";
+  font-style: normal;
+  color: black;
+}
+.popan-background .popan-section .popan-content .popan-content-info .main-description-info li .name {
+  font-weight: 700;
+}
+
+.popan-background._active {
+  visibility: visible;
+  opacity: 1;
+}

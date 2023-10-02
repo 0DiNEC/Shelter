@@ -1,0 +1,314 @@
+// This style uses in main page and pets page
+// TODO: For pets page reinitialize element color
+
+@import "color-template";
+
+.header {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  .header-logo {
+    padding-top: 30px;
+    padding-left: 40px;
+
+    @media (max-width: $width-medium) {
+      padding-left: 30px;
+    }
+
+    @media (max-width: $width-small) {
+      padding-left: 20px;
+    }
+
+    .header-logo_link {
+      text-decoration: none;
+    }
+
+    .header-logo__heading {
+      font-family: Georgia, serif;
+      font-size: 32px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+    }
+
+    .header-logo__description {
+      margin-top: 9px;
+      padding-left: 4px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: 0.1em;
+    }
+  }
+
+  // ! Burger menu
+  .nav-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 22px;
+    margin-top: 49px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+
+    @media (max-width: $width-medium_no-scroll) {
+      display: flex;
+    }
+
+    .nav-menu_line {
+      box-sizing: border-box;
+      width: 30px;
+      border-width: 1px;
+      border-style: solid;
+    }
+  }
+
+  .nav-menu._active {
+    transform: rotate(90deg);
+    .nav-menu_line {
+      border-color: $beige;
+    }
+  }
+
+  .menu {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+
+    position: fixed;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: $gray-black-opacity;
+
+    transition: all 0.2s ease-in-out;
+  }
+
+  .nav-menu__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    z-index: 0;
+
+    width: 320px;
+    height: 100%;
+    padding-top: 249px;
+    background: black;
+    list-style: none;
+
+    .list_link {
+      font-family: "Arial";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 160%;
+      a {
+      color: $white-gray;
+      }
+
+      text-align: center;
+      margin-bottom: 40px;
+      width: 242px;
+    }
+
+    .list_link-active {
+      border-bottom: solid 3px $beige;
+      a{
+        color: $light-s;
+      }
+    }
+  }
+
+  .menu._show {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+    right: 0;
+  }
+
+  // ! navigation links
+  .header__nav {
+    display: block;
+    padding-top: 46px;
+    padding-right: 40px;
+
+    // 1280px
+    @media (max-width: $width-without-scroll) {
+      padding-right: 40px - $scroll-width;
+    }
+
+    // 768px
+    @media (max-width: $width-medium) {
+      padding-left: 0;
+      padding-right: 30px;
+    }
+    // less less 768 px
+    @media (max-width: $width-medium_no-scroll) {
+      display: none;
+    }
+
+    .nav__list {
+      display: flex;
+      .list_link {
+        margin-left: 36px;
+        list-style-type: none;
+        a {
+          font-family: Arial, sans-serif;
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 160%;
+          text-decoration: none;
+        }
+      }
+      .list_link-active {
+        border-bottom: solid 3px $beige;
+        a {
+          cursor: default;
+        }
+      }
+    }
+  }
+}
+
+// Footer
+.footer-background {
+  background: url("../../assets/images/noise_transparent.png"),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%), #211f20;
+}
+
+.footer {
+  @extend %screen-setting;
+  padding-right: 25px;
+  padding-left: 40px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  column-gap: 145px;
+
+  @media (max-width: $width-without-scroll) {
+    padding-right: 25px;
+  }
+
+  @media (max-width: 1000px) {
+    column-gap: 80px;
+  }
+
+  @media (max-width: $width-medium) {
+    padding-right: 30px;
+    padding-left: 45px;
+    column-gap: 20px;
+  }
+
+  @media (max-width: $width-small) {
+    padding: 0;
+  }
+
+  .footer__contacts,
+  .footer__locations {
+    display: flex;
+    flex-direction: column;
+    margin-top: 56px;
+    width: 295px;
+
+    height: 234px;
+    justify-content: space-between;
+
+    @media (max-width: 1000px) {
+      margin-top: 31px;
+      width: 300px;
+    }
+
+    @media (max-width: $width-small) {
+      margin-bottom: 7px;
+    }
+
+    .footer__heading-text {
+      display: flex;
+      color: $white;
+
+      @media (max-width: $width-small) {
+        text-align: center;
+        width: 280px;
+        margin: 0 auto;
+      }
+    }
+
+    .footer_info {
+      display: flex;
+      transition: 0.3s ease-in-out;
+
+      @media (max-width: $width-small) {
+        justify-content: center;
+      }
+
+      &:hover {
+        transform: scale(110%);
+      }
+
+      .footer__heading {
+        margin-left: 20px;
+        color: $beige;
+        line-height: 115%;
+      }
+
+      .footer__heading_end {
+        padding-top: 5px;
+      }
+    }
+  }
+
+  .footer__contacts {
+    @media (max-width: $width-small) {
+      height: 208px;
+    }
+  }
+
+  .footer__locations {
+    margin-right: 15px;
+
+    @media (max-width: $width-small) {
+      margin-right: 0;
+      height: 222px;
+      width: 300px;
+
+      .footer__heading-text {
+        margin: 0 auto;
+      }
+
+      .locations__info {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  .footer-image {
+    margin-top: 40px;
+    width: 300px;
+    height: 310px;
+
+    @media (max-width: $width-medium) {
+      margin-top: 65px;
+      margin-right: 17px;
+    }
+
+    @media (max-width: $width-mobile-medium) {
+      width: 260px;
+      height: 269px;
+      margin-top: 40px;
+      margin-right: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

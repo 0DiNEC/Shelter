@@ -1,0 +1,120 @@
+@import "color-template";
+
+.popan-background {
+  transition: visibility, opacity 0.3s ease;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: $gray-black-opacity;
+
+  .popan-section {
+    position: absolute;
+    max-width: 630px;
+    min-width: 220px;
+    max-height: 400px;
+    min-height: 300px;
+    background: $light-s;
+    border-radius: 9px;
+
+    @media (max-width: 500px) {
+      max-width: 220px;
+    }
+
+    .popan-close_button {
+      position: absolute;
+      width: 52px;
+      height: 52px;
+      border: 2px solid $beige;
+      border-radius: 100px;
+      right: -42px;
+      top: -53px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+
+      &:hover {
+        background: $beige;
+      }
+
+      img {
+        position: absolute;
+        left: 38.46%;
+        right: 38.46%;
+        top: 38.46%;
+        bottom: 38.46%;
+      }
+    }
+
+    .popan-content {
+      height: 100%;
+      display: flex;
+
+      .popan-content__image {
+        @media (max-width: 700px) {
+          display: none;
+        }
+      }
+
+      .popan-content-info {
+        padding: 10px;
+
+        .heading__text {
+          @media (max-width: 500px) {
+            text-align: center;
+          }
+        }
+
+        .animal-item__name {
+          margin: 10px 0;
+          @media (max-width: 500px) {
+            text-align: center;
+          }
+        }
+
+        .animal-description {
+          margin-top: 10px;
+          line-height: 110%;
+          @media (max-width: 500px) {
+            text-align: justify;
+          }
+        }
+
+        .main-description-info {
+          margin-top: 5px;
+          margin-left: 14px;
+
+          li {
+            padding-bottom: 6px;
+            &::marker {
+              color: $beige;
+            }
+
+            span {
+              font-size: 15px;
+              line-height: 110%;
+              letter-spacing: 0.06em;
+              font-family: "Georgia";
+              font-style: normal;
+              color: black;
+            }
+            .name {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.popan-background._active {
+  visibility: visible;
+  opacity: 1;
+}

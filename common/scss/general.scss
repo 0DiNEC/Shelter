@@ -1,0 +1,83 @@
+@import "color-template";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.h3-title {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+
+  @media (max-width: $width-small) {
+    font-size: 25px;
+  }
+}
+
+// waring: don't define font-height
+.h4-title {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+
+
+}
+
+a {
+  text-decoration: none;
+}
+
+// ! buttons
+
+.btn-font {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.button-arrow_hover {
+  transition: 0.3s ease-in;
+  background: $light-s;
+  cursor: pointer;
+  &:hover {
+    background: $primary-light;
+  }
+}
+
+.button-arrow_inactive {
+  color: $dark-s;
+  border: 2px solid $dark-s;
+}
+
+
+.slider__animal-item {
+
+  transition: 0.5s ease-in-out;
+  
+  .animal-item__button {
+    background: $light-s;
+    color: $gray-black;
+  }
+
+  &:hover {
+    background: $white;
+    transform: scale(105%);
+    box-shadow: 0px 0px 10px 2px $primary-light;
+
+    cursor: pointer;
+
+    .animal-item__button {
+      cursor: pointer;
+      background: $primary-light;
+    }
+  }
+}
+
